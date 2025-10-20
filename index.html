@@ -1161,6 +1161,15 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 </script>
+<audio id="bgMusic" src="music/love.mp3" loop></audio>
+
+<script>
+  // chỉ phát nhạc khi người dùng chạm
+  document.body.addEventListener('click', function () {
+    const audio = document.getElementById('bgMusic');
+    audio.play();
+  }, { once: true }); // chỉ kích hoạt 1 lần
+</script>
 
 </body>
 <div id="heart3D" style="width:100vw; height:100vh;"></div>
